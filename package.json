@@ -5,6 +5,13 @@
   "type": "module",
   "license": "MIT",
   "sideEffects": false,
+  "tags": [
+    "jsx",
+    "rolldown",
+    "rolldown-plugin",
+    "solid",
+    "solidjs"
+  ],
   "files": [
     "dist",
     "README.md",
