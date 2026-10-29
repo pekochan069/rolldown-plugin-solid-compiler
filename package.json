@@ -1,0 +1,48 @@
+{
+  "name": "rolldown-plugin-solid-compiler",
+  "version": "0.1.0",
+  "description": "Rolldown transform plugin for the native Solid compiler.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "bun run build && bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "dependencies": {
+    "@solidjs/compiler": "^2.0.0-rc.17"
+  },
+  "peerDependencies": {
+    "rolldown": "^1.0.0"
+  },
+  "devDependencies": {
+    "@solidjs/web": "^2.0.0-rc.17",
+    "@types/bun": "^1.4.4",
+    "happy-dom": "21.0.4",
+    "rolldown": "^1.2.15",
+    "solid-js": "^2.0.0-rc.17",
+    "typescript": "^7.0.2"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": "1.4.4"
+    }
+  }
+}
